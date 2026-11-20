@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Золотая корочка — учебный сайт семейной пекарни. Круассаны, хлеб на закваске и булочки с корицей.">
+  <meta name="theme-color" content="#f9f3e8">
+  <title>Золотая корочка — семейная пекарня</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Золотая корочка — главный экран">
+        <svg class="brand-mark" viewBox="0 0 48 58" fill="none" aria-hidden="true">
+          <path d="M24 52V12M24 17C16 17 11 12 11 5C19 5 24 10 24 17ZM24 27C15 27 8 22 8 14C18 14 24 20 24 27ZM24 38C14 38 7 32 7 24C17 24 24 30 24 38ZM24 17C32 17 37 12 37 5C29 5 24 10 24 17ZM24 27C33 27 40 22 40 14C30 14 24 20 24 27ZM24 38C34 38 41 32 41 24C31 24 24 30 24 38Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-copy">
+          <span class="brand-name">Золотая корочка</span>
+          <span class="brand-caption">семейная пекарня</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Разделы сайта">
+        <a href="#home" data-page-link>Главная</a>
+        <a href="#menu" data-page-link>Выпечка</a>
+        <a href="#about" data-page-link>О пекарне</a>
+        <a href="#contacts" data-page-link>Контакты</a>
+      </nav>
+      <p class="header-hours">Каждый день<span>08:00–20:00</span></p>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- Каждый раздел — отдельный экран. Переключение находится в script.js. -->
+    <section class="screen hero" id="home" data-screen="Главная" aria-labelledby="hero-title">
+      <div class="container screen-shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Семейная пекарня «Золотая корочка»</p>
+          <h1 id="hero-title" tabindex="-1">Свежая выпечка <span>для тёплого утра</span></h1>
+          <p class="hero-description">Круассан к первой чашке кофе, хлеб к семейному столу и булочка с корицей — для себя.</p>
+          <div class="hero-actions">
+            <a class="button" href="#menu">Посмотреть выпечку</a>
+            <a class="text-link" href="#contacts">Как нас найти</a>
+          </div>
+        </div>
+        <figure class="hero-visual">
+          <img src="images/croissants.png" width="1024" height="1024" alt="Три золотистых круассана на деревянной доске в утреннем свете" fetchpriority="high" decoding="async">
+          <figcaption>Маленькая радость к первой чашке кофе</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="screen menu-section" id="menu" data-screen="Наша выпечка" aria-labelledby="menu-title">
+      <div class="container screen-shell menu-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Из нашей печи</p>
+            <h2 id="menu-title" tabindex="-1">Что-нибудь <em>вкусное</em></h2>
+          </div>
+          <p class="section-intro">К завтраку, к семейному столу<br>или просто для себя.</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-photo">
+              <img src="images/croissants.png" width="1024" height="1024" alt="Классические круассаны с золотистыми слоями" decoding="async">
+            </div>
+            <div class="product-copy">
+              <h3>Классический круассан</h3>
+              <p class="product-description">Тонкие золотистые слои и сливочный вкус.</p>
+              <p class="price">180 ₽ <small>за 1 шт.</small></p>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-photo">
+              <img src="images/bread.png" width="1254" height="1254" alt="Хлеб на закваске и ломтики с пористым мякишем" decoding="async">
+            </div>
+            <div class="product-copy">
+              <h3>Хлеб на закваске</h3>
+              <p class="product-description">Хрустящая корочка и пористый мякиш.</p>
+              <p class="price">290 ₽ <small>за буханку</small></p>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-photo">
+              <img src="images/cinnamon-roll.png" width="1254" height="1254" alt="Булочки с корицей и сахарной глазурью" decoding="async">
+            </div>
+            <div class="product-copy">
+              <h3>Булочка с корицей</h3>
+              <p class="product-description">Мягкое тесто, корица и сахарная глазурь.</p>
+              <p class="price">160 ₽ <small>за 1 шт.</small></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen about-section" id="about" data-screen="О пекарне" aria-labelledby="about-title">
+      <div class="container screen-shell about-grid">
+        <figure class="about-visual">
+          <img src="images/bakery-interior.png" width="1536" height="1024" alt="Девушка-пекарь в льняном фартуке с противнем булочек у открытой печи в уютной пекарне" decoding="async">
+          <figcaption>Тёплый свет, знакомый аромат и выпечка из печи</figcaption>
+        </figure>
+        <div class="about-copy">
+          <p class="eyebrow">Место с тёплым характером</p>
+          <h2 id="about-title" tabindex="-1">Маленькая пекарня.<br><em>Большое тепло.</em></h2>
+          <p>Хорошему тесту нужно время, а свежей выпечке — забота. В «Золотой корочке» мы печём небольшими партиями и уделяем внимание каждой детали — от замеса до золотистой корочки.</p>
+          <p>Загляните по дороге, выберите угощение для близких или возьмите что-нибудь к кофе. Пусть эта небольшая остановка станет приятной частью вашего дня.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen contacts-section" id="contacts" data-screen="Контакты" aria-labelledby="contacts-title">
+      <div class="container screen-shell contacts-shell">
+        <div class="contacts-panel">
+          <div class="contacts-heading">
+            <p class="eyebrow">Заглядывайте в гости</p>
+            <h2 id="contacts-title" tabindex="-1">За чем-нибудь<br><em>тёплым.</em></h2>
+            <p>Выберите свою любимую выпечку.<br>Остальное пусть немного подождёт.</p>
+          </div>
+          <div class="contact-details">
+            <div class="contact-item">
+              <h3>Наш адрес</h3>
+              <p>Новосибирск,<br>Пекарская улица, 12</p>
+            </div>
+            <div class="contact-item">
+              <h3>Часы работы</h3>
+              <p>Ежедневно, 08:00–20:00</p>
+            </div>
+            <a class="button button-light" href="#menu">Выбрать к завтраку</a>
+          </div>
+        </div>
+        <p class="project-note">Учебный проект вымышленной пекарни. Адрес, часы работы и цены приведены для примера.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Стрелки и номер экрана всегда остаются в одном месте. -->
+  <footer class="screen-navigation" aria-label="Переход между экранами" hidden>
+    <div class="container pagination-inner">
+      <button class="page-button previous-page" type="button" id="previous-page" aria-label="Предыдущий экран">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m14 6-6 6 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Назад</span>
+      </button>
+      <p class="page-status" role="status" aria-live="polite" aria-atomic="true"><span id="page-counter">1 / 4</span><span id="page-title">Главная</span></p>
+      <button class="page-button next-page" type="button" id="next-page" aria-label="Следующий экран">
+        <span>Далее</span>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m10 6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </footer>
+</body>
+</html>
+
